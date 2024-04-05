@@ -75,4 +75,21 @@ class TestBowlingGame(unittest.TestCase):
         self.game.rolls(3)
         self.rollMany(0,16)
         assert self.game.score()==24
+
+    def testPerfectGame(self):
+#         test.TestBowlingGame.testPerfectGame failed with error: <class 'AttributeError'> 'TestBowlingGame' object has no attribute 'rollMany'
+# Traceback (most recent call last):
+#   File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/case.py", line 57, in testPartExecutor
+#     yield
+#   File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/case.py", line 623, in run
+#     self._callTestMethod(testMethod)
+#   File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/case.py", line 579, in _callTestMethod
+#     if method() is not None:
+#        ^^^^^^^^
+#   File "/Users/Jedi/Desktop/Project_IT6039/test.py", line 80, in testPerfectGame
+#     self.rollMany(10,12)
+#     ^^^^^^^^^^^^^
+# AttributeError: 'TestBowlingGame' object has no attribute 'rollMany'
+        self.rollMany(10,12)
+        assert self.game.score()==300
     
