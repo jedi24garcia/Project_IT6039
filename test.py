@@ -1,5 +1,3 @@
-#!/usr/bin/env/ python3
-
 import unittest
 import BowlingGame
 
@@ -115,3 +113,6 @@ class TestBowlingGame(unittest.TestCase):
     def rollMany(self, pins,rolls):
         for i in range(rolls):
             self.game.rolls(pins)
+
+if __name__ == "__main___":
+    unittest.main()
