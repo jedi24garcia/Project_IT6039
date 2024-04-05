@@ -1,3 +1,5 @@
+#!/usr/bin/env/ python3
+
 import unittest
 import BowlingGame
 
@@ -109,3 +111,7 @@ class TestBowlingGame(unittest.TestCase):
 # AttributeError: 'TestBowlingGame' object has no attribute 'rollMany'
         self.rollMany(5,21)
         assert self.game.score()==150
+
+    def rollMany(self, pins,rolls):
+        for i in range(rolls):
+            self.game.rolls(pins)
