@@ -37,3 +37,23 @@ class TestBowlingGame(unittest.TestCase):
 # AttributeError: 'TestBowlingGame' object has no attribute 'rollMany'
         self.rollMany(1, 20)
         assert self.game.score()==20
+
+    def testOneSpare(self):
+#         test.TestBowlingGame.testOneSpare failed with error: <class 'TypeError'> 'list' object is not callable
+# Traceback (most recent call last):
+#   File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/case.py", line 57, in testPartExecutor
+#     yield
+#   File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/case.py", line 623, in run
+#     self._callTestMethod(testMethod)
+#   File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/case.py", line 579, in _callTestMethod
+#     if method() is not None:
+#        ^^^^^^^^
+#   File "/Users/Jedi/Desktop/Project_IT6039/test.py", line 42, in testOneSpare
+#     self.game.rolls(5)
+# TypeError: 'list' object is not callable
+        self.game.rolls(5)
+        self.game.rolls(5)      
+        self.game.rolls(3)
+        self.rollMany(0,17)
+        assert self.game.score()==16
+    
