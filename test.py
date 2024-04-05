@@ -22,23 +22,11 @@ class TestBowlingGame(unittest.TestCase):
         assert self.game.score()==16
 
     def testOneStrike(self):
-#         test.TestBowlingGame.testOneStrike failed with error: <class 'TypeError'> 'list' object is not callable
-# Traceback (most recent call last):
-#   File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/case.py", line 57, in testPartExecutor
-#     yield
-#   File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/case.py", line 623, in run
-#     self._callTestMethod(testMethod)
-#   File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/case.py", line 579, in _callTestMethod
-#     if method() is not None:
-#        ^^^^^^^^
-#   File "/Users/Jedi/Desktop/Project_IT6039/test.py", line 61, in testOneStrike
-#     self.game.rolls(10)
-# TypeError: 'list' object is not callable
-        self.game.rolls(10)
-        self.game.rolls(4)
-        self.game.rolls(3)
-        self.rollMany(0,16)
-        assert self.game.score()==24
+        self.game.roll(10)
+        self.game.roll(4)
+        self.game.roll(3)
+        self.rollMany(0, 16)
+        self.assertEqual(self.game.score(), 24)
 
     def testPerfectGame(self):
         self.rollMany(10,12)
