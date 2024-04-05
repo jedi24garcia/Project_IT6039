@@ -1,14 +1,19 @@
 import unittest
-import BowlingGame
+from BowlingGame import BowlingGame
 
 class TestBowlingGame(unittest.TestCase):
     def setUp(self):
-        self.game = BowlingGame.BowlingGame()
-    
+        # self.game = BowlingGame.BowlingGame()
+        self.game = BowlingGame() 
+        self.pin = 0
+
     def testGutterGame(self): 
-        for i in range(0, 20):
-            self.game.rolls(0)
-        assert self.game.score()==0
+        # for i in range(0, 20):
+        #     self.game.rolls(0)
+        # assert self.game.score()==0
+        self.rollMany(0, 20)
+        self.assertEqual(self.game.score(), 0)
+
 # test.TestBowlingGame.testGutterGame failed with error: <class 'TypeError'> 'list' object is not callable
 # Traceback (most recent call last):
 #   File "/opt/homebrew/Cellar/python@3.11/3.11.6_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/case.py", line 57, in testPartExecutor
@@ -112,7 +117,7 @@ class TestBowlingGame(unittest.TestCase):
 
     def rollMany(self, pins,rolls):
         for i in range(rolls):
-            self.game.rolls(pins)
+            self.game.roll(pins)
 
 if __name__ == "__main___":
     unittest.main()
