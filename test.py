@@ -4,7 +4,6 @@ from BowlingGame import BowlingGame
 class TestBowlingGame(unittest.TestCase):
     def setUp(self):
         self.game = BowlingGame() 
-        self.pin = 0
 
     def testGutterGame(self): 
         self.rollMany(0, 20)
