@@ -31,7 +31,7 @@ class TestBowlingGame(unittest.TestCase):
         self.roll_many(10, 12)
         self.assertEqual(self.game.score(), 300)
     
-    def testOneSpare(self):
+    def test_every_five(self):
         self.roll_many(5, 21)
         self.assertEqual(self.game.score(), 150)
 
