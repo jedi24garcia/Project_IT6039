@@ -11,7 +11,7 @@ class TestBowlingGame(unittest.TestCase):
 
     def testAllOnes(self):
         self.rollMany(1, 20)
-        assert self.game.score()==20
+        self.assertEqual(self.game.score(), 20)
 
     def testOneSpare(self):
         self.game.rolls(5)
