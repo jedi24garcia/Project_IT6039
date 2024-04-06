@@ -5,29 +5,29 @@ class TestBowlingGame(unittest.TestCase):
     def setUp(self):
         self.game = BowlingGame() 
 
-    def testGutterGame(self): 
+    def test_Gutter_Game(self): 
         self.roll_many(0, 20)
         self.assertEqual(self.game.score(), 0)
 
-    def testAllOnes(self):
+    def test_All_Ones(self):
         self.roll_many(1, 20)
         self.assertEqual(self.game.score(), 20)
 
-    def testOneSpare(self):
+    def test_One_Spare(self):
         self.game.roll(5)
         self.game.roll(5)      
         self.game.roll(3)
         self.roll_many(0, 17)
         self.assertEqual(self.game.score(), 16)
 
-    def testOneStrike(self):
+    def test_One_Strike(self):
         self.game.roll(10)
         self.game.roll(4)
         self.game.roll(3)
         self.roll_many(0, 16)
         self.assertEqual(self.game.score(), 24)
 
-    def testPerfectGame(self):
+    def test_Perfect_Game(self):
         self.roll_many(10, 12)
         self.assertEqual(self.game.score(), 300)
     
