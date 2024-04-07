@@ -33,16 +33,61 @@ class BowlingGame:
         return result # returns the total score computated for the game.
 
     def is_Strike(self, roll_index):
+        """Configure if a roll is a strike.
+        
+        Argument:
+            roll_index: The index of the roll in the list of rolls.
+
+            
+        Returns:
+            bool: If the roll is a strike, then true. Otherwise, its false.
+        """
         return self.rolls[roll_index] == 10
 
     def is_Spare(self, roll_index):
+        """Configure if the frame is a spare.
+        
+        Argument:
+            roll_index: The index of the first roll in the frame.
+        
+        Returns:
+            bool: If the roll is a spare, then true. Otherwise, its false.
+            
+        """
         return self.rolls[roll_index] + self.rolls[roll_index + 1] == 10
 
     def strikeScore(self, roll_index):
+        """Computates the score for a strike.
+        
+        Argument:
+            roll_index: The index of the strike roll.
+
+        Returns:
+            int: The score for the strike.
+        
+        """
         return 10 + self.rolls[roll_index + 1] + self.rolls[roll_index + 2]
 
     def spareScore(self, roll_index):
+        """Computates the score for a spare.
+
+        Argument:
+            roll_index: The index of the first roll in the spare frame.
+
+        Returns:
+            int: The score for the spare.
+        
+        """
         return 10 + self.rolls[roll_index + 2]
 
     def frameScore(self, roll_index):
+        """Calcutates the score for the regular or orderly frame.
+        
+        Argument:
+            roll_index: The index of the first roll in the frame.
+
+        Returns:
+            int: The score for the frame.
+        
+        """
         return self.rolls[roll_index] + self.rolls[roll_index + 1]
