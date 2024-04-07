@@ -52,7 +52,10 @@ class TestBowlingGame(unittest.TestCase):
             pins: The number of rolls to perform.
         """
         for i in range(rolls):
+            # loops over the specified number of roll
             self.game.roll(pins)
+            # roll the specified number of pins
 
+"""This runs the unit tests when directly executed."""
 if __name__ == "__main__":
     unittest.main()
