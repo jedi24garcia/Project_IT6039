@@ -1,6 +1,10 @@
 class BowlingGame:
+    """Declares the start of a new class named BowlingGame."""
+    
     def __init__(self):
+        """Defines the constructor method __init__ for the BowlingGame class."""
         self.rolls= []
+        """Initializes an instance variable rolls as an empty list. This will store the number of pins balled down."""
 
     def roll(self,pins):
         self.rolls.append(pins)
