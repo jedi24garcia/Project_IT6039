@@ -51,7 +51,7 @@ class TestBowlingGame(unittest.TestCase):
             rolls: The number of pins to fall down in each roll.
             pins: The number of rolls to perform.
         """
-        for i in range(rolls):
+        for _ in range(rolls): # The underscore is a convention in Python used as a disposable variable name when the value is redundant or not needed inside the loop.
             # loops over the specified number of roll
             self.game.roll(pins)
             # roll the specified number of pins

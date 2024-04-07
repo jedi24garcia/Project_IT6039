@@ -16,7 +16,7 @@ class BowlingGame:
         result = 0
         roll_index = 0
         """These 2 lines initialize two variables where 'result' is to store the overall score, and roll_index to retain track of the current roll being scored."""
-        for frame_index in range(10):
+        for _ in range(10): # The underscore is a convention in Python used as a disposable variable name when the value is redundant or not needed inside the loop.
             """This line begins a loop that iterates over 10 frames in the game."""
             if self.is_Strike(roll_index): # checks if the current roll is a strike.
                 result += self.strikeScore(roll_index)
