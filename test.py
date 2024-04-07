@@ -1,5 +1,5 @@
-import unittest
-from BowlingGame import BowlingGame
+import unittest # this line imports the unittest module. This is Python's testing framework which provides tools for writing and running tests.
+from BowlingGame import BowlingGame # this imports the BowlingGame class from the BowlingGame.py module which we need to test for the unit tests. 
 
 class TestBowlingGame(unittest.TestCase):
     """This class represents a game of Bowling."""
