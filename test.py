@@ -44,7 +44,7 @@ class TestBowlingGame(unittest.TestCase):
         self.roll_many(5, 21) # roll 5 pins for 21 rolls
         self.assertEqual(self.game.score(), 150) # declare or asserts that the score is 150
 
-    def roll_many(self, pins,rolls):
+    def roll_many(self, pins, rolls):
         """Roll a specified number of pins for a specified number of rolls.
         
         Arguments:
